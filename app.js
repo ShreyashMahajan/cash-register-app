@@ -9,11 +9,12 @@ var notesData = [2000,500,100,20,10,5,1];
 checkButton.addEventListener("click",function checkBillCashValidation(){
   
     hideMessage();
-   
-    if(billAmount.value >0){
+    var billAmountvalue = Number(billAmount.value);
+    var cashGivenvalue = Number(cashGiven.value);
+    if(billAmountvalue >0){
 
-       if(cashGiven.value >= billAmount.value ){
-             var amountToBeReturned = cashGiven.value - billAmount.value;
+       if(cashGivenvalue >= billAmountvalue ){
+             var amountToBeReturned = cashGivenvalue - billAmountvalue;
              calculateChange(amountToBeReturned);
 
        }else {
